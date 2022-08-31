@@ -10,16 +10,32 @@ export class Cadastrar {
     return this._nome;
   }
 
+  set nome(_nome: string) {
+    this._nome = _nome
+  }
+
   get status(): string {
     return this._status;
+  }
+
+  set status(_status) {
+    this._status = _status
   }
 
   get data(): Date {
     return this._data;
   }
 
+  set data(_data: Date) {
+    this._data = _data
+  }
+
   get descricao(): string {
     return this._descricao;
+  }
+
+  set descricao(_descricao: string) {
+    this._descricao = _descricao
   }
 
   public static criaDe(nomeString: string, statusString: string, dataString: string, descricaoString: string): Cadastrar {
@@ -31,6 +47,5 @@ export class Cadastrar {
 
     return new Cadastrar(nomePacote, status, data, textArea);
   }
-
 
 }
