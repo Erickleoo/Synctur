@@ -8,7 +8,4 @@ export class Cadastrados {
     lista() {
         return this.cadastrados;
     }
-    esvazia() {
-        this.cadastrados;
-    }
 }

@@ -10,8 +10,4 @@ export class Cadastrados {
   public lista(): Cadastrar[] {
     return this.cadastrados;
   }
-
-  public esvazia() {
-    this.cadastrados;
-  }
 }

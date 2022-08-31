@@ -18,7 +18,7 @@ export class CadastrarView extends View<Cadastrados> {
         <small class="data-pacote-cadastrado">Status: ${cadastrar.status}</small>
         <div class="buttons-pacotete-cadastrado">
           <button class="button-editar cor-3">Editar</button>
-          <button class="button-excluir cor-4" onclick="${this.apagar()}">Excluir</button>
+          <button class="button-excluir cor-4">Excluir</button>
         </div>
       </div>
     </div>
@@ -29,10 +29,5 @@ export class CadastrarView extends View<Cadastrados> {
 
   private formatarData(data: Date): string {
     return new Intl.DateTimeFormat().format(data)
-  }
-
-  public apagar(): void {
-    console.log("oi")
-
   }
 } 
