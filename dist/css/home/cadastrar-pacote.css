@@ -1,0 +1,133 @@
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.conteudo {
+  margin: 57.2px 126px 48px 125px;
+  display: flex;
+  justify-content: center;
+  gap: 44px;
+  align-items: flex-start;
+}
+
+.conteudo-pacote {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 589px;
+}
+
+.conteudo-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #153546;
+}
+
+.input-nome-pacote {
+  width: 100%;
+  height: 38px;
+  border: 1px solid #CED4D4;
+  border-radius: 4px;
+  padding: 9px 0px 8px 22.44px;
+  color: #ABB5BE;
+  font-size: 1rem;
+}
+
+.input-nome-pacote:focus {
+  outline-color: var(--cor-2);
+}
+
+.conteudo-pacote-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.conteudo-pacote-status h3 {
+  margin-bottom: 20px;
+}
+
+.inputs-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.checkbox {
+  accent-color: var(--cor-2);
+}
+
+.radio-label {
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #153546;
+}
+
+.conteudo-pacote-data {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.input-data-viagem {
+  height: 38px;
+  border: 1px solid #CED4DA;
+  padding: 9px 0 8px 11.16px;
+  color: #ABB5BE;
+  font-size: 1rem;
+}
+
+.input-data-viagem:focus {
+  outline-color: var(--cor-2);
+}
+
+.conteudo-descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  width: 555px;
+}
+
+.pacote-descricao {
+  max-width: 100%;
+  height: 161px;
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+  padding: 21.47px 0px 0px 21.14px;
+  resize: none;
+}
+
+.pacote-descricao:focus {
+  outline-color: var(--cor-2);
+}
+
+.pacote-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 58px;
+}
+
+.button-cadastrar {
+  width: 109px;
+  height: 39px;
+  border-radius: 4px;
+  padding: 10px 16px 10px 16px;
+  border: none;
+  color: #FFF;
+  font-weight: 600px;
+  font-size: 1rem;
+  cursor: pointer;
+}

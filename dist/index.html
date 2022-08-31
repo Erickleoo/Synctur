@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyncTur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header-logo">Synctur</h1>
+  </header>
+
+  <main>
+    <div class="title-container">
+      <h2 class="title">Cadastrar Pacotes</h2>
+    </div>
+    <section class="form">
+
+      <form class="conteudo form">
+
+        <div class="conteudo-pacote">
+
+          <h3 class="conteudo-label" for="pacote">Pacote</h3>
+          <input class="input-nome-pacote" type="text" placeholder="Digite o nome completo">
+          <div class="conteudo-pacote-grid">
+
+            <div class="conteudo-pacote-status">
+
+              <h3 class="conteudo-label" for="status">Status do Pacote</h3>
+
+              <div class="inputs-flex">
+
+                <div class="input-container">
+                  <input name="status" type="checkbox" class="input-ativo checkbox" value="ativo">
+                  <label class="radio-label" for="ativo">Ativo</label>
+                </div>
+
+                <div class="input-container">
+                  <input name="status" type="checkbox" class="input-inativo checkbox" value="inativo">
+                  <label class="radio-label" for="inativo">Inativo</label>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="conteudo-pacote-data">
+              <h3 class="conteudo-label" for="data-da-viagem">Data da Viagem</h3>
+              <input type="date" class="input-data-viagem">
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="conteudo-descricao">
+          <h3 class="conteudo-label" for="pacote-descricao">Descrição</h3>
+          <textarea name="pacote-descricao" class="pacote-descricao" placeholder="Descrição do pacote"></textarea>
+        </div>
+    </section>
+
+    <div class="pacote-button">
+      <button type="submit" class="button-cadastrar cor-2">Cadastrar</button>
+    </div>
+    </form>
+
+    <section class="pacotes-cadastrados">
+    </section>
+
+  </main>
+
+  <footer class="footer-container">
+    <h2 class="footer-logo">Synctur</h2>
+    <span class="linha-vertical"></span>
+    <ul class="footer-contato">
+      <li>Company Inc, 8901 Marmora Road, Glasgow, D04 89GR</li>
+      <li>Call us now toll free (800)2345-8789</li>
+      <li>Customer support: support@demolink.org</li>
+      <li>Skype: sample-username</li>
+    </ul>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>

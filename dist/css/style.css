@@ -1,0 +1,8 @@
+@import url(./reset/reset.css);
+@import url(./utilidades/cores.css);
+
+@import url(./home/header.css);
+@import url(./home/cadastrar-pacote.css);
+@import url(./home/pacote-cadastrado.css);
+
+@import url(./home/footer.css);

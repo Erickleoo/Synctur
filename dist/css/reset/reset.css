@@ -1,0 +1,11 @@
+* {
+  margin: 0px;
+  font-family: 'Inter', sans-serif;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
