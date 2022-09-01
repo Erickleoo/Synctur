@@ -1,7 +1,7 @@
 import { CadastrarPacoteController } from "./controllers/cadastrar-controller.js";
 
-
 const controller = new CadastrarPacoteController();
+
 const form = document.querySelector(".form");
 if (form) {
   form.addEventListener("submit", event => {
@@ -12,8 +12,6 @@ if (form) {
 else {
   throw Error("Não foi possível inicializar a aplicação!")
 }
-
-
 
 export function AtualizarEventListenerPacotes(milisecons: number) {
   setTimeout(() => {
@@ -32,6 +30,7 @@ export function AtualizarEventListenerPacotes(milisecons: number) {
     }
   }, milisecons)
 }
+
 window.onload = () => {
   controller.importaDados()
   AtualizarEventListenerPacotes(3000)

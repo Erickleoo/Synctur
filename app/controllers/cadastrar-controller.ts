@@ -88,7 +88,7 @@ export class CadastrarPacoteController {
       this.inputID.value = cadastrado.id;
       console.log("criar codigo do status")
     }
-    else if (etapa == 2) {//gravar a informacao e excluir a anterior
+    else if (etapa == 2) {
       this.adiciona()
     }
     else {
