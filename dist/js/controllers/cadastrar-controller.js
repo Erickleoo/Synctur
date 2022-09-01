@@ -1,5 +1,6 @@
 import { Cadastrados } from "../models/cadastrados.js";
 import { Cadastrar } from "../models/cadastrar.js";
+import { AtualizarEventListenerPacotes } from "../script.js";
 import { CadastradosService } from "../services/cadastrados-services.js";
 import { CadastrarView } from "../views/cadastrar-view.js";
 export class CadastrarPacoteController {
@@ -12,7 +13,6 @@ export class CadastrarPacoteController {
         this.inputData = document.querySelector(".input-data-viagem");
         this.textAreaDescricao = document.querySelector(".pacote-descricao");
         this.cadastrarView.update(this.cadastrados);
-        this.importaDados();
     }
     adiciona() {
         const cadastrar = Cadastrar.criaDe(this.inputNome.value, this.valorSelect(this.inputStatus), this.inputData.value, this.textAreaDescricao.value);
@@ -40,6 +40,37 @@ export class CadastrarPacoteController {
         this.inputData.value = '';
         this.textAreaDescricao.value = '';
         this.inputNome.focus();
+    }
+    dataTexto(data) {
+        let dataString;
+        let mes = (data.getMonth() < 10 ? "0" + data.getMonth().toString() : data.getMonth().toString());
+        dataString = (data.getFullYear().toString() + "-"
+            + mes + "-"
+            + data.getDate().toString());
+        return dataString;
+    }
+    excluirItem(seletor) {
+        this.cadastrados.excluir(seletor);
+        AtualizarEventListenerPacotes(1000);
+        this.cadastrarView.update(this.cadastrados);
+    }
+    editar(etapa, seletor) {
+        if (etapa == 1 && seletor) {
+            const cadastrado = this.cadastrados.selecionar(seletor);
+            this.inputNome.value = cadastrado.nome;
+            this.textAreaDescricao.value = cadastrado.descricao;
+            this.inputData.value = this.dataTexto(cadastrado.data);
+            console.log("criar codigo do status");
+        }
+        else if (etapa == 2) {
+            this.excluirItem(seletor);
+            this.adiciona();
+        }
+        else {
+            throw Error("MEtodo em editar nao encontrado");
+        }
+        AtualizarEventListenerPacotes(500);
+        this.cadastrarView.update(this.cadastrados);
     }
     atualizaView() {
         this.cadastrarView.update(this.cadastrados);

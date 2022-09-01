@@ -3,4 +3,5 @@ export interface CadastroDoDia {
   status: string;
   data: Date;
   descricao: string;
+  id: string;
 }

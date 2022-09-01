@@ -1,9 +1,10 @@
 export class Cadastrar {
-    constructor(_nome, _status, _data, _descricao) {
+    constructor(_nome, _status, _data, _descricao, _id) {
         this._nome = _nome;
         this._status = _status;
         this._data = _data;
         this._descricao = _descricao;
+        this._id = _id;
     }
     get nome() {
         return this._nome;
@@ -29,12 +30,16 @@ export class Cadastrar {
     set descricao(_descricao) {
         this._descricao = _descricao;
     }
+    get id() {
+        return this._id;
+    }
     static criaDe(nomeString, statusString, dataString, descricaoString) {
         const nomePacote = nomeString;
         const status = statusString;
         const exp = /-/g;
         const data = new Date(dataString.replace(exp, '/'));
         const textArea = descricaoString;
-        return new Cadastrar(nomePacote, status, data, textArea);
+        const id = "1";
+        return new Cadastrar(nomePacote, status, data, textArea, id);
     }
 }

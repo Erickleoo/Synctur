@@ -3,7 +3,8 @@ export class Cadastrar {
     private _nome: string,
     private _status: string,
     private _data: Date,
-    private _descricao: string
+    private _descricao: string,
+    private _id: string
   ) { }
 
   get nome(): string {
@@ -38,14 +39,19 @@ export class Cadastrar {
     this._descricao = _descricao
   }
 
+  get id(): string {
+    return this._id;
+  }
+
+
   public static criaDe(nomeString: string, statusString: string, dataString: string, descricaoString: string): Cadastrar {
     const nomePacote = nomeString;
     const status = statusString;
     const exp = /-/g;
     const data = new Date(dataString.replace(exp, '/'));
     const textArea = descricaoString;
+    const id = "1"
 
-    return new Cadastrar(nomePacote, status, data, textArea);
+    return new Cadastrar(nomePacote, status, data, textArea, id);
   }
-
 }

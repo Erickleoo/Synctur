@@ -5,7 +5,7 @@ export class CadastradosService {
             .then(res => res.json())
             .then((dados) => {
             return dados.map(dado => {
-                return new Cadastrar(dado.nome, dado.status, new Date(dado.data), dado.descricao);
+                return new Cadastrar(dado.nome, dado.status, new Date(dado.data), dado.descricao, dado.id);
             });
         });
     }

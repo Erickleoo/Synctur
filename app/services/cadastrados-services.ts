@@ -12,7 +12,8 @@ export class CadastradosService {
             dado.nome,
             dado.status,
             new Date(dado.data),
-            dado.descricao
+            dado.descricao,
+            dado.id
           )
         })
       });
