@@ -25,3 +25,15 @@
 .cor-4 {
   background-color: var(--cor-4);
 }
+
+.cor-2:hover {
+  background-color: #412c7a;
+}
+
+.cor-3:hover {
+  background-color: #b38705;
+}
+
+.cor-4:hover {
+  background-color: #85212b;
+}

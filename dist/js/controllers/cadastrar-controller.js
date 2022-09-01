@@ -59,6 +59,7 @@ export class CadastrarPacoteController {
         this.cadastrarView.update(this.cadastrados);
     }
     editar(etapa, seletor) {
+        window.scrollTo(0, 0);
         if (etapa == 1 && seletor) {
             const cadastrado = this.cadastrados.selecionar(seletor);
             this.inputNome.value = cadastrado.nome;
