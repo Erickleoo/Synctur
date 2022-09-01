@@ -33,13 +33,13 @@ export class Cadastrar {
     get id() {
         return this._id;
     }
-    static criaDe(nomeString, statusString, dataString, descricaoString) {
+    static criaDe(nomeString, statusString, dataString, descricaoString, idString) {
         const nomePacote = nomeString;
         const status = statusString;
         const exp = /-/g;
         const data = new Date(dataString.replace(exp, '/'));
         const textArea = descricaoString;
-        const id = "1";
+        const id = idString;
         return new Cadastrar(nomePacote, status, data, textArea, id);
     }
 }

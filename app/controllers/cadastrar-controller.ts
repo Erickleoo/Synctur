@@ -9,7 +9,7 @@ export class CadastrarPacoteController {
   private inputStatus: any;
   private inputData: HTMLInputElement;
   private textAreaDescricao: HTMLInputElement;
-  private inputID: any;
+  private inputID: HTMLInputElement;
   private cadastrados = new Cadastrados();
   private cadastrarView = new CadastrarView(".pacotes-cadastrados", true);
   private cadastradosService = new CadastradosService();
@@ -19,6 +19,7 @@ export class CadastrarPacoteController {
     this.inputStatus = document.getElementsByName("status") as any;
     this.inputData = document.querySelector(".input-data-viagem") as HTMLInputElement;
     this.textAreaDescricao = document.querySelector(".pacote-descricao") as HTMLInputElement;
+    this.inputID = document.querySelector(".input-id") as HTMLInputElement;
     this.cadastrarView.update(this.cadastrados);
   }
 
@@ -28,6 +29,7 @@ export class CadastrarPacoteController {
       this.valorSelect(this.inputStatus),
       this.inputData.value,
       this.textAreaDescricao.value,
+      this.inputID.value
     );
     if (!this.validacaoData(cadastrar.data)) {
       alert("Somente é possível adicionar pacotes com uma data superior que a atual!");
@@ -36,6 +38,7 @@ export class CadastrarPacoteController {
     this.cadastrados.adiciona(cadastrar);
     this.limparFormulario();
     this.atualizaView();
+    AtualizarEventListenerPacotes(500)
   }
 
   public importaDados(): void {
@@ -54,22 +57,24 @@ export class CadastrarPacoteController {
     this.inputStatus.value = '';
     this.inputData.value = '';
     this.textAreaDescricao.value = '';
+    this.inputID.value = '';
     this.inputNome.focus();
   }
 
   protected dataTexto(data: Date): string {
     let dataString: string;
     let mes = (data.getMonth() < 10 ? "0" + data.getMonth().toString() : data.getMonth().toString())
+    let dia = (data.getDate() < 10 ? "0" + data.getDate().toString() : data.getDate().toString())
     dataString = (data.getFullYear().toString() + "-"
       + mes + "-"
-      + data.getDate().toString()
+      + dia
     )
     return dataString
   }
 
   public excluirItem(seletor: any) {
     this.cadastrados.excluir(seletor)
-    AtualizarEventListenerPacotes(1000)
+    AtualizarEventListenerPacotes(500)
     this.cadastrarView.update(this.cadastrados)
   }
 
@@ -79,15 +84,16 @@ export class CadastrarPacoteController {
       this.inputNome.value = cadastrado.nome;
       this.textAreaDescricao.value = cadastrado.descricao;
       this.inputData.value = this.dataTexto(cadastrado.data);
+      this.inputID.value = cadastrado.id;
       console.log("criar codigo do status")
     }
     else if (etapa == 2) {//gravar a informacao e excluir a anterior
-      this.excluirItem(seletor)
       this.adiciona()
     }
     else {
       throw Error("MEtodo em editar nao encontrado")
     }
+    this.excluirItem(seletor)
     AtualizarEventListenerPacotes(500)
     this.cadastrarView.update(this.cadastrados)
   }

@@ -44,13 +44,13 @@ export class Cadastrar {
   }
 
 
-  public static criaDe(nomeString: string, statusString: string, dataString: string, descricaoString: string): Cadastrar {
+  public static criaDe(nomeString: string, statusString: string, dataString: string, descricaoString: string, idString: string): Cadastrar {
     const nomePacote = nomeString;
     const status = statusString;
     const exp = /-/g;
     const data = new Date(dataString.replace(exp, '/'));
     const textArea = descricaoString;
-    const id = "1"
+    const id = idString
 
     return new Cadastrar(nomePacote, status, data, textArea, id);
   }

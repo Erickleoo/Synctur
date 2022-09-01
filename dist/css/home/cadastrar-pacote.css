@@ -40,6 +40,10 @@
   font-size: 1rem;
 }
 
+.input-id {
+  display: none;
+}
+
 .input-nome-pacote:focus {
   outline-color: var(--cor-2);
 }
