@@ -68,7 +68,7 @@ export class CadastrarPacoteController {
             this.inputID.value = cadastrado.id;
         }
         else if (etapa == 2) {
-            console.log("Etapa 2");
+            console.log("Etapa 2 console");
         }
         else {
             throw Error("Metodo em editar nao encontrado");
