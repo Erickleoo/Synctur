@@ -8,6 +8,12 @@
     width: 350px;
   }
 
+  .conteudo-pacote-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .pacotes-cadastrados {
     margin: 20px;
   }
@@ -16,4 +22,36 @@
     width: 350px
   }
 
+  .footer-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .footer-container {
+    text-align: center;
+  }
+
+  .linha-vertical {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .conteudo {
+    margin: 20px;
+    flex-direction: column;
+  }
+
+  .conteudo-pacote {
+    width: 300px;
+  }
+
+  .pacotes-cadastrados {
+    margin: 20px;
+  }
+
+  .conteudo-descricao {
+    width: 300px
+  }
 }
