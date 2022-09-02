@@ -6,7 +6,7 @@ export class CadastrarView extends View {
             return ` 
     <div class="pacote-cadastrado-container">
       <div class="pacote-cadastrado-informacoes">
-        <h3 class="titulo-pacote-cadastrado">${cadastrar.id}-${cadastrar.nome}</h3>
+        <h3 class="titulo-pacote-cadastrado">${cadastrar.nome}</h3>
         <p class="paragrafo-pacote-cadastrado">${cadastrar.descricao}</p>
         <small class="data-pacote-cadastrado">Data da viagem: ${this.formatarData(cadastrar.data)}</small>
         <br>

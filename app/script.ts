@@ -2,6 +2,7 @@ import { CadastrarPacoteController } from "./controllers/cadastrar-controller.js
 
 const controller = new CadastrarPacoteController();
 
+// Evento do tipo submit onde ao ser clicado adiciona os itens digitados no site.
 const form = document.querySelector(".form");
 if (form) {
   form.addEventListener("submit", event => {
@@ -13,6 +14,7 @@ else {
   throw Error("Não foi possível inicializar a aplicação!")
 }
 
+// Função responsávem por atualizar os eventos de editar e excluir nos pacotes.
 export function AtualizarEventListenerPacotes(milisecons: number) {
   setTimeout(() => {
     let tamanho = document.querySelectorAll(".button-excluir");
@@ -32,6 +34,8 @@ export function AtualizarEventListenerPacotes(milisecons: number) {
   }, milisecons)
 }
 
+
+// Função responsável por colocar os dados importados da API no site.
 window.onload = () => {
   controller.importaDados()
   AtualizarEventListenerPacotes(1000)

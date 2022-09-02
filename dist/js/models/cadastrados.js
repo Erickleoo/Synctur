@@ -31,7 +31,7 @@ export class Cadastrados {
         console.log(i);
         return this.cadastrados[i];
     }
-    lastID() {
+    ultimoID() {
         let maiorId = this.cadastrados[0].id;
         this.cadastrados.map((data, index) => {
             if ((data.id) > maiorId) {

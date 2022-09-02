@@ -23,6 +23,7 @@ export class CadastrarPacoteController {
     this.cadastrarView.update(this.cadastrados);
   }
 
+  // Metodo pra adicionar o valor dos inputs nos itens cadastrados
   public adiciona(): void {
     const cadastrar = Cadastrar.criaDe(
       this.inputNome.value,
@@ -41,6 +42,7 @@ export class CadastrarPacoteController {
     AtualizarEventListenerPacotes(500)
   }
 
+  // Metodo pra importar os dados da API
   public importaDados(): void {
     this.cadastradosService
       .obterCadastradosSistema()
@@ -52,6 +54,7 @@ export class CadastrarPacoteController {
       });
   }
 
+  // Metodo pra limpar o formulário após o usuário cadastrar o item.
   private limparFormulario(): void {
     this.inputNome.value = '';
     this.inputStatus.value = '';
@@ -61,6 +64,7 @@ export class CadastrarPacoteController {
     this.inputNome.focus();
   }
 
+  // Metodo pra transformar a data em string
   protected dataTexto(data: Date): string {
     let dataString: string;
     let mes = (data.getMonth() < 10 ? "0" + data.getMonth().toString() : data.getMonth().toString())
@@ -72,12 +76,14 @@ export class CadastrarPacoteController {
     return dataString
   }
 
+  // Metodo pra excluir os itens
   public excluirItem(seletor: any) {
     this.cadastrados.excluir(seletor)
     AtualizarEventListenerPacotes(500)
     this.cadastrarView.update(this.cadastrados)
   }
 
+  // Metodo pra editar os itens
   public editar(etapa: number, seletor: string) {
     window.scrollTo(0, 0)
     if (etapa == 1 && seletor) {
@@ -99,16 +105,18 @@ export class CadastrarPacoteController {
     this.cadastrarView.update(this.cadastrados)
   }
 
-
+  // Metodo pra atualizar os itens cadastrados
   private atualizaView(): void {
     this.cadastrarView.update(this.cadastrados);
   }
 
+  // Metodo pra validar a data pra somente um dia a frente do atual
   private validacaoData(inputdata: any) {
     let data = new Date();
     return data < inputdata;
   }
 
+  // Metodo pra pegar o valor do checkbox
   private valorSelect(status: any): string {
     status = this.inputStatus;
     for (let i = 0; i < status.length; i++) {

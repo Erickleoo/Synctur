@@ -16,6 +16,7 @@ export abstract class View<T> {
     }
   }
 
+  // Metodo não deixa o usuário digitar uma tag script pra tentar colher informações do site.
   public update(model: T): void {
     let template = this.template(model);
     if (this.escapar) {
@@ -24,5 +25,6 @@ export abstract class View<T> {
     this.elemento.innerHTML = template;
   }
 
+  // Metodo abstrato que será implementado por outra classe
   protected abstract template(model: T): string;
 }

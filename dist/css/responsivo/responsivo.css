@@ -1,0 +1,19 @@
+@media (max-width: 600px) {
+  .conteudo {
+    margin: 20px;
+    flex-direction: column;
+  }
+
+  .conteudo-pacote {
+    width: 350px;
+  }
+
+  .pacotes-cadastrados {
+    margin: 20px;
+  }
+
+  .conteudo-descricao {
+    width: 350px
+  }
+
+}

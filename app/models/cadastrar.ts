@@ -43,7 +43,7 @@ export class Cadastrar {
     return this._id;
   }
 
-
+  // Metodo para pegar os itens cadastrados e validar os mesmos
   public static criaDe(nomeString: string, statusString: string, dataString: string, descricaoString: string, idString: string): Cadastrar {
     const nomePacote = nomeString;
     const status = statusString;

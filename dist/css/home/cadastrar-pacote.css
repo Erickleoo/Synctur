@@ -20,7 +20,7 @@
 .conteudo-pacote {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 27px;
   width: 589px;
 }
 
@@ -83,7 +83,7 @@
 .conteudo-pacote-data {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 27px;
 }
 
 .input-data-viagem {

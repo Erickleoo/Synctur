@@ -3,6 +3,7 @@ import { Cadastrar } from "../models/cadastrar.js";
 
 export class CadastradosService {
 
+  // Metodo responsável por pegar os dados da API
   public obterCadastradosSistema(): Promise<Cadastrar[]> {
     return fetch("https://62361b7feb166c26eb2f488a.mockapi.io/pacotes")
       .then(res => res.json())
