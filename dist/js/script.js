@@ -14,12 +14,13 @@ export function AtualizarEventListenerPacotes(milisecons) {
     setTimeout(() => {
         var _a, _b;
         let tamanho = document.querySelectorAll(".button-excluir");
-        for (let i = 1; i < tamanho.length + 1; i++) {
-            let seletor = "#editar" + i.toString();
+        for (let i = 0; i < tamanho.length; i++) {
+            let id = tamanho[i].getAttribute("value");
+            let seletor = "#editar" + id.toString();
             (_a = document.querySelector(seletor)) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => {
                 controller.editar(1, seletor);
             });
-            let seletor1 = "#excluir" + i.toString();
+            let seletor1 = "#excluir" + id.toString();
             (_b = document.querySelector(seletor1)) === null || _b === void 0 ? void 0 : _b.addEventListener('click', () => {
                 controller.excluirItem(seletor1);
             });
@@ -28,5 +29,5 @@ export function AtualizarEventListenerPacotes(milisecons) {
 }
 window.onload = () => {
     controller.importaDados();
-    AtualizarEventListenerPacotes(3000);
+    AtualizarEventListenerPacotes(1000);
 };

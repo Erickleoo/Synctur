@@ -89,10 +89,10 @@ export class CadastrarPacoteController {
       console.log("criar codigo do status")
     }
     else if (etapa == 2) {
-      this.adiciona()
+      console.log("aaaaaaa")
     }
     else {
-      throw Error("MEtodo em editar nao encontrado")
+      throw Error("Metodo em editar nao encontrado")
     }
     this.excluirItem(seletor)
     AtualizarEventListenerPacotes(500)

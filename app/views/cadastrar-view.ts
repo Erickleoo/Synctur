@@ -17,8 +17,8 @@ export class CadastrarView extends View<Cadastrados> {
         <br>
         <small class="data-pacote-cadastrado">Status: ${cadastrar.status}</small>
         <div class="buttons-pacotete-cadastrado">
-          <button class="button-editar cor-3" id="editar${cadastrar.id}">Editar</button>
-          <button class="button-excluir cor-4" id="excluir${cadastrar.id}">Excluir</button>
+          <button value="${cadastrar.id}" class="button-editar cor-3" id="editar${cadastrar.id}">Editar</button>
+          <button value="${cadastrar.id}" class="button-excluir cor-4" id="excluir${cadastrar.id}">Excluir</button>
         </div>
       </div>
     </div>
