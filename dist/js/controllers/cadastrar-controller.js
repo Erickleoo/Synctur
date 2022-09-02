@@ -66,10 +66,9 @@ export class CadastrarPacoteController {
             this.textAreaDescricao.value = cadastrado.descricao;
             this.inputData.value = this.dataTexto(cadastrado.data);
             this.inputID.value = cadastrado.id;
-            console.log("criar codigo do status");
         }
         else if (etapa == 2) {
-            console.log("aaaaaaa");
+            console.log("Etapa 2");
         }
         else {
             throw Error("Metodo em editar nao encontrado");
