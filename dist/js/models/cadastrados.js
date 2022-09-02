@@ -3,7 +3,7 @@ export class Cadastrados {
         this.cadastrados = [];
     }
     adiciona(cadastros) {
-        this.cadastrados.unshift(cadastros);
+        this.cadastrados.push(cadastros);
     }
     lista() {
         return this.cadastrados;

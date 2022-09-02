@@ -5,7 +5,7 @@ export class Cadastrados {
 
   // Metodo pra adicionar os itens cadastrados ao final do array
   public adiciona(cadastros: Cadastrar) {
-    this.cadastrados.unshift(cadastros);
+    this.cadastrados.push(cadastros);
   }
 
   // Metodo pra listar os itens cadastrados
