@@ -1,3 +1,4 @@
+import ScrollAnima from "./animation/scrollanima.js";
 import { CadastrarPacoteController } from "./controllers/cadastrar-controller.js";
 
 const controller = new CadastrarPacoteController();
@@ -40,3 +41,7 @@ window.onload = () => {
   controller.importaDados()
   AtualizarEventListenerPacotes(1000)
 }
+
+// Scroll animation
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+scrollAnima.init();
